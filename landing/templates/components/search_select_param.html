@@ -1,0 +1,14 @@
+{% load static %}
+<div class="search-select-param">
+  <div class="d-flex align-items-center gap-1">
+    <img src="{% static icon %}" alt="icon" />
+    <label for="{{ id }}">{{ label }}</label>
+  </div>
+  <div class="input-wrapper">
+    <select name="{{ name }}" id="{{ id }}" class="custom-select">
+      {% for option in options %}
+      <option value="{{ option.value }}">{{ option.label }}</option>
+      {% endfor %}
+    </select>
+  </div>
+</div>

@@ -1,0 +1,200 @@
+@font-face {
+    font-family: 'AcuminProExtraCondensedBold';
+    src: url('/static/font/AcuminProExtraCondensedBold.otf') format('opentype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'HelveticaNeueLTStd';
+    src: url('/static/font/HelveticaNeueLTStd.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+:root {
+    --color-dark: #000;
+    --color-light: #fff;
+    --color-theme: #D6E9ED;
+    --padding-horizontal: 3.5rem;
+    --padding-vertical: 2rem;
+    --padding-vertical-long: 3.5rem;
+    --margin-bottom: 2rem;
+    --margin-bottom-short: 1rem;
+}
+
+
+body {
+    font-family: 'HelveticaNeueLTStd', sans-serif;
+}
+
+/* section header */
+
+.header-landing {
+    margin-bottom: var(--margin-bottom);
+}
+
+.header-landing nav {
+    height: 75px;
+    background-color: var(--color-light);
+    padding: 20px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-landing img {
+    height: 35px;
+}
+
+.header-landing .background {
+    background-image: url('/static/img/spain.png');
+    width: 100%;
+    aspect-ratio: 16 / 6;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    position: relative;
+}
+
+.header-landing .background span {
+    font-family: 'AcuminProExtraCondensedBold', sans-serif;
+    color: var(--color-light);
+    line-height: 0.465;
+    letter-spacing: 2rem;
+    font-size: clamp(2rem, 20vw, 40rem);
+    z-index: 0;
+}
+
+/* section search */
+
+.search-landing {
+    padding: var(--padding-vertical) var(--padding-horizontal);
+    position: relative;
+    z-index: 1;
+}
+
+/* section destination */
+
+.destination-landing {
+    padding: var(--padding-vertical) var(--padding-horizontal);
+    margin-bottom: var(--margin-bottom);
+}
+
+.destination-landing > span {
+    font-family: 'AcuminProExtraCondensedBold', sans-serif;
+    font-size: clamp(2rem, 20vw, 6rem);
+}
+
+.destination-landing > div .image {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    margin-bottom: 1rem;
+}
+
+.destination-landing > div span {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    line-height: 20px;
+    font-weight: 400;
+}
+
+/* section featured */
+
+.featured-landing {
+    background-color: var(--color-theme);
+    padding: var(--padding-vertical) var(--padding-horizontal);
+    margin-bottom: var(--margin-bottom);
+}
+
+.featured-landing > span {
+    font-family: 'AcuminProExtraCondensedBold', sans-serif;
+    font-size: clamp(2rem, 20vw, 6rem);
+}
+
+.featured-landing > div .image {
+    width: 100%;
+    aspect-ratio: 3 / 4;
+    object-fit: cover;
+    margin-bottom: var(--margin-bottom-short);
+}
+
+/* section reason */
+
+.reason-landing {
+    padding: var(--padding-vertical) var(--padding-horizontal);
+    margin-bottom: var(--margin-bottom);
+}
+
+.reason-landing span {
+    font-family: 'AcuminProExtraCondensedBold', sans-serif;
+    font-size: clamp(2rem, 20vw, 6rem);
+}
+
+/* section contact */
+
+.contact-landing {
+    padding: var(--padding-vertical) var(--padding-horizontal);
+    background-image: url('/static/img/contact.png');
+    width: 100%;
+    aspect-ratio: 16 / 8;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.contact-landing > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.contact-landing span {
+    font-family: 'AcuminProExtraCondensedBold', sans-serif;
+    line-height: 1;
+    color: var(--color-light);
+    font-size: clamp(2rem, 20vw, 6rem);
+}
+
+.contact-landing p {
+    color: var(--color-light);
+    font-size: clamp(0.5rem, 20vw, 0.85rem);
+    font-weight: 100;
+    letter-spacing: 0.3rem;
+    opacity: 80%;
+}
+
+.contact-landing button {
+    color: var(--color-light);
+    font-size: clamp(0.5rem, 20vw, 0.85rem);
+    font-weight: 100;
+    letter-spacing: 0.3rem;
+    opacity: 80%;
+}
+
+/* section contact */
+
+.footer-landing {
+    background-color: var(--color-theme);
+    padding: var(--padding-vertical-long) var(--padding-horizontal);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 1rem;
+}
+
+.footer-landing > div {
+    min-width: 200px;
+    flex: 1 1 200px;
+    max-width: 300px;
+    box-sizing: border-box;
+}

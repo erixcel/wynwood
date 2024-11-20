@@ -1,0 +1,18 @@
+<section class="search-landing">
+    <div class="row">
+        <div class="col-md-3">
+            {% include 'components/search_select_param.html' with id="destination" label="DESTINO" name="destination" icon="svg/search_icon.svg" options=options %}
+        </div>
+        <div class="col-md-3">
+            {% include 'components/search_select_param.html' with id="calendar" label="LLEGADA - SALIDA" name="calendar" icon="svg/calendar_icon.svg" options=options %}
+        </div>
+        <div class="col-md-3">
+            {% include 'components/search_select_param.html' with id="guests" label="HUESPEDES" name="guests" icon="svg/guests_icon.svg" options=options %}
+        </div>
+        <div class="col-md-3">
+            <button class="btn btn-outline-dark rounded rounded-5 px-3">
+                Buscar
+            </button>
+        </div>
+    </div>
+</section>
