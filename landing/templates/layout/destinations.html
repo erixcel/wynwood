@@ -1,18 +1,19 @@
 {% load static %}
+{% load i18n %}
 <section class="destination-landing">
-    <span>NUESTROS DESTINOS</span>
-    <div class="row">
-        <div class="col col-sm-6 col-lg-4">
+    <span>{% translate "destinations_title" %}</span>
+    <div class="row gy-3 gy-lg-5">
+        <div class="col-12 col-sm-6 col-lg-4">
             <img class="image" src="{% static 'img/barcelona.png' %}" alt=""/>
-            <span>Barcelona</span>
+            <span>{% translate "place_01" %}</span>
         </div>
-        <div class="col col-sm-6 col-lg-4">
+        <div class="col-12 col-sm-6 col-lg-4">
             <img class="image" src="{% static 'img/madrid.png' %}" alt=""/>
-            <span>Madrid</span>
+            <span>{% translate "place_02" %}</span>
         </div>
-        <div class="col col-sm-6 col-lg-4">
+        <div class="col-12 col-sm-6 col-lg-4">
             <img class="image" src="{% static 'img/valencia.png' %}" alt=""/>
-            <span>Valencia</span>
+            <span>{% translate "place_03" %}</span>
         </div>
     </div>
 </section>

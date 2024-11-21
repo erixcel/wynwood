@@ -22,12 +22,13 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'landing', # agregando la app landing al proyecto (reconozca migraciones de bd)
 ]
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
-    'django.middleware.locale.LocaleMiddleware',  # permite soportar multiples lenguajes
+    'django.middleware.locale.LocaleMiddleware',  # escoje automaticamente el lenguaje del usuario
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
@@ -50,6 +51,7 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                'django.template.context_processors.i18n',  # agrego variables de i18n a los templates
             ],
         },
     },
@@ -64,6 +66,8 @@ DATABASES = {
         'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
+
+AUTH_USER_MODEL = 'landing.User'    # si se desea crear tablas heredando de AbstractUser
 
 AUTH_PASSWORD_VALIDATORS = [
     {
@@ -80,6 +84,7 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
+# Se agrega el idioma por defecto del proyecto (solo si no hay: django.middleware.locale.LocaleMiddleware)
 LANGUAGE_CODE = 'es'
 
 TIME_ZONE = 'UTC'
@@ -92,9 +97,9 @@ LANGUAGES = [
     ('en', 'English'),
 ]
 
-LOCALE_PATHS = (
-    os.path.join(BASE_DIR, 'locale'),  # agregando la carpeta locale al proyecto
-)
+LOCALE_PATHS = [
+    os.path.join(BASE_DIR, 'locale')
+]
 
 STATIC_URL = 'static/'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'

@@ -1,20 +1,33 @@
 {% load static %}
+{% load i18n %}
+{% load tags %}
+{% search_context as context %}
 <div class="footer-landing">
-    <div>
-        <img src="{% static 'svg/wynwood_logo.svg' %}" alt="">
-    </div>
-    <div>
-        {% include 'components/search_select_param.html' with id="destination" label="DESTINO" name="destination" icon="svg/search_icon.svg" options=options %}
-    </div>
-    <div>
-        {% include 'components/search_select_param.html' with id="calendar" label="LLEGADA - SALIDA" name="calendar" icon="svg/calendar_icon.svg" options=options %}
-    </div>
-    <div>
-        {% include 'components/search_select_param.html' with id="guests" label="HUESPEDES" name="guests" icon="svg/guests_icon.svg" options=options %}
-    </div>
-    <div>
-        <button class="btn btn-outline-dark rounded rounded-5 px-3">
-            Buscar
-        </button>
+    <div class="row g-3 g-sm-5 g-xl-0">
+        <div class="col-12 col-xl-7">
+            <div class="row justify-content-center align-items-center g-3 g-sm-5 g-xl-0">
+                <div class="col-12 col-xl-4 d-flex justify-content-center align-items-center">
+                    <img src="{% static 'svg/wynwood_logo.svg' %}" alt="">
+                </div>
+                <div class="col-sm-6 col-xl-4">
+                    {% include 'components/search_select_param.html' with properties=context.destination options=context.destinations %}
+                </div>
+                <div class="col-sm-6 col-xl-4">
+                    {% include 'components/search_date_param.html' with properties=context.date %}
+                </div>
+            </div>
+        </div>
+        <div class="col-12 col-xl-5">
+            <div class="row justify-content-center align-items-center g-3 g-sm-5 g-xl-0">
+                <div class="col-md-6">
+                    {% include 'components/search_select_param.html' with properties=context.guest options=context.guests%}
+                </div>
+                <div class="col-md-6 d-flex justify-content-center align-items-center">
+                    {% include 'components/search_button.html' %}
+                </div>
+            </div>
+        </div>
+        
+        
     </div>
 </div>

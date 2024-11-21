@@ -1,11 +1,23 @@
 {% load static %}
 {% load i18n %}
+<nav>
+  <img src="{% static 'svg/wynwood_logo.svg' %}" alt="">
+  <div>
+    {% if LANGUAGE_CODE != 'en' %}
+      <a href="/change_i18n?language=en">EN</a>
+    {% else %}
+      <span>EN</span>
+    {% endif %}
+    /
+    {% if LANGUAGE_CODE != 'es' %}
+      <a href="/change_i18n?language=es">ES</a>
+    {% else %}
+      <span>ES</span>
+    {% endif %}
+  </div>
+</nav>
 <header class="header-landing">
-  <nav>
-    <img src="{% static 'svg/wynwood_logo.svg' %}" alt="">
-    <span>EN / ES</span>
-  </nav>
   <div class="background">
-    <span>{% translate "ESPAÑA" %}</span>
+    <span>{% translate "header_country" %}</span>
   </div>
 </header>

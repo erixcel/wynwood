@@ -1,9 +1,10 @@
+{% load i18n %}
 <div class="contact-landing">
     <div>
-        <span>ALQUILERES A LARGO PLAZO</span>
-        <p>CONTAMOS CON TARIFAS ESPECIALES PARA ESTADÍAS LARGAS</p>
-        <button class="d-flex btn btn-outline-light">
-            CONTACTANOS
+        <span>{% translate "contact_title" %}</span>
+        <p>{% translate "contact_description" %}</p>
+        <button class="d-flex btn btn-outline-light rounded rounded-5 px-3 px-lg-5">
+            {% translate "contact_btn_text" %}
         </button>
     </div>
 </div>

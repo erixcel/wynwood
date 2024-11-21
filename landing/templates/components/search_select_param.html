@@ -1,14 +1,17 @@
 {% load static %}
 <div class="search-select-param">
   <div class="d-flex align-items-center gap-1">
-    <img src="{% static icon %}" alt="icon" />
-    <label for="{{ id }}">{{ label }}</label>
+    <img src="{% static properties.icon %}" alt="icon" />
+    <label for="{{ properties.id }}">{{ properties.label }}</label>
   </div>
-  <div class="input-wrapper">
-    <select name="{{ name }}" id="{{ id }}" class="custom-select">
-      {% for option in options %}
-      <option value="{{ option.value }}">{{ option.label }}</option>
-      {% endfor %}
-    </select>
+  <div class="select-container">
+    <div class="dropdown input-container">
+        <input class="dropdown-toggle" type="text" id="{{ properties.id }}" data-bs-toggle="dropdown" aria-expanded="false" placeholder="{{ properties.placeholder }}" readonly>
+        <ul class="dropdown-menu" aria-labelledby="{{ properties.id }}">
+          {% for option in options %}
+            <li><a class="dropdown-item" data-value="{{ option }}">{{ option }}</a></li>
+          {% endfor %}
+        </ul>
+    </div>
   </div>
 </div>

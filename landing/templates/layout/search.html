@@ -1,18 +1,28 @@
+{% load i18n %}
+{% load tags %}
+{% search_context as context %}
+
 <section class="search-landing">
-    <div class="row">
-        <div class="col-md-3">
-            {% include 'components/search_select_param.html' with id="destination" label="DESTINO" name="destination" icon="svg/search_icon.svg" options=options %}
+    <div class="row align-items-center g-3 g-lg-5">
+        <div class="col-12 col-xl-7">
+            <div class="row g-3 g-lg-5">
+                <div class="col-12 col-sm-6">
+                    {% include 'components/search_select_param.html' with properties=context.destination options=context.destinations %}
+                </div>
+                <div class="col-12 col-sm-6">
+                    {% include 'components/search_date_param.html' with properties=context.date %}
+                </div>
+            </div>
         </div>
-        <div class="col-md-3">
-            {% include 'components/search_select_param.html' with id="calendar" label="LLEGADA - SALIDA" name="calendar" icon="svg/calendar_icon.svg" options=options %}
-        </div>
-        <div class="col-md-3">
-            {% include 'components/search_select_param.html' with id="guests" label="HUESPEDES" name="guests" icon="svg/guests_icon.svg" options=options %}
-        </div>
-        <div class="col-md-3">
-            <button class="btn btn-outline-dark rounded rounded-5 px-3">
-                Buscar
-            </button>
+        <div class="col-12 col-xl-5">
+            <div class="row g-3 g-lg-5">
+                <div class="col-12 col-sm-6 col-xl-8">
+                    {% include 'components/search_select_param.html' with properties=context.guest options=context.guests %}
+                </div>
+                <div class="col-12 col-sm-6 col-xl-4 d-flex justify-content-center align-items-center">
+                    {% include 'components/search_button.html' %}
+                </div>
+            </div>
         </div>
     </div>
 </section>

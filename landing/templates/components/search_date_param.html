@@ -1,0 +1,12 @@
+{% load static %}
+{% load i18n %}
+<div class="search-date-param">
+  <div class="d-flex align-items-center gap-1">
+    <img src="{% static properties.icon %}" alt="icon" />
+    <label for="{{ properties.id }}">{{ properties.label }}</label>
+  </div>
+  <div class="daterange-container input-container">
+    <input type="text" class="daterange daterange-input" placeholder="{{ properties.placeholder }}">
+  </div>
+</div>
+

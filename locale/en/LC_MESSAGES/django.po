@@ -1,0 +1,114 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-11-20 23:36-0500\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: .\landing\templates\components\search_button.html:3
+msgid "search_btn_text"
+msgstr "Search"
+
+#: .\landing\templates\layout\contact.html:4
+msgid "contact_title"
+msgstr "LONG-TERM RENTALS"
+
+#: .\landing\templates\layout\contact.html:5
+msgid "contact_description"
+msgstr "WE OFFER SPECIAL RATES FOR LONG STAYS"
+
+#: .\landing\templates\layout\contact.html:7
+msgid "contact_btn_text"
+msgstr "CONTACT US"
+
+#: .\landing\templates\layout\destinations.html:4
+msgid "destinations_title"
+msgstr "OUR DESTINATIONS"
+
+#: .\landing\templates\layout\destinations.html:8
+msgid "place_01"
+msgstr "Barcelona"
+
+#: .\landing\templates\layout\destinations.html:12
+msgid "place_02"
+msgstr "Madrid"
+
+#: .\landing\templates\layout\destinations.html:16
+msgid "place_03"
+msgstr "Valencia"
+
+#: .\landing\templates\layout\featured.html:4
+msgid "featured_title"
+msgstr "FEATURED PROPERTIES"
+
+#: .\landing\templates\layout\featured.html:16
+#: .\landing\templates\layout\featured.html:29
+#: .\landing\templates\layout\featured.html:42
+msgid "featured_night"
+msgstr "night"
+
+#: .\landing\templates\layout\header.html:21
+msgid "header_country"
+msgstr "SPAIN"
+
+#: .\landing\templates\layout\reason.html:5
+msgid "reason_why"
+msgstr "WHY SPAIN?"
+
+#: .\landing\templates\layout\reason.html:8
+msgid "reason_01"
+msgstr ""
+"Located in the heart of the Iberian Peninsula, Spain is a captivating "
+"destination known for its culture, gastronomy, and the history told through "
+"its streets, towns, and cities. Here, colonial and modern architecture "
+"merge, creating a vibrant urban atmosphere that always has a story to tell."
+
+#: .\landing\templates\layout\reason.html:11
+msgid "reason_02"
+msgstr ""
+"Let yourself be carried away by its lively culture, from energetic flamenco "
+"performances to festivals, and enjoy the exquisite variety of flavors in its "
+"gastronomy while surrounded by charming local markets and cozy cafes."
+
+#: .\landing\templates\layout\reason.html:12
+msgid "reason_03"
+msgstr ""
+"Here, modernity and tradition converge to create a unique travel experience. "
+"A destination where every step is a journey through time."
+
+#: .\landing\templatetags\tags.py:24
+msgid "search_destination"
+msgstr "DESTINATION"
+
+#: .\landing\templatetags\tags.py:25
+msgid "search_destination_ph"
+msgstr "Select your destination"
+
+#: .\landing\templatetags\tags.py:30
+msgid "search_date"
+msgstr "CHECK-IN - CHECK-OUT"
+
+#: .\landing\templatetags\tags.py:31
+msgid "search_date_ph"
+msgstr "Add dates"
+
+#: .\landing\templatetags\tags.py:36
+msgid "search_guests"
+msgstr "GUESTS"
+
+#: .\landing\templatetags\tags.py:37
+msgid "search_guests_ph"
+msgstr "Guests"

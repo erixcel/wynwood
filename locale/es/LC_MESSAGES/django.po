@@ -1,0 +1,117 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-11-20 21:04-0500\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=n == 1 ? 0 : n != 0 && n % 1000000 == 0 ? "
+"1 : 2;\n"
+
+#: .\landing\templates\components\search_button.html:3
+msgid "search_btn_text"
+msgstr "Buscar"
+
+#: .\landing\templates\layout\contact.html:4
+msgid "contact_title"
+msgstr "ALQUILERES A LARGO PLAZO"
+
+#: .\landing\templates\layout\contact.html:5
+msgid "contact_description"
+msgstr "CONTAMOS CON TARIFAS ESPECIALES PARA ESTADÍAS LARGAS"
+
+#: .\landing\templates\layout\contact.html:7
+msgid "contact_btn_text"
+msgstr "CONTACTANOS"
+
+#: .\landing\templates\layout\destinations.html:4
+msgid "destinations_title"
+msgstr "NUESTROS DESTINOS"
+
+#: .\landing\templates\layout\destinations.html:8
+msgid "place_01"
+msgstr "Barcelona"
+
+#: .\landing\templates\layout\destinations.html:12
+msgid "place_02"
+msgstr "Madrid"
+
+#: .\landing\templates\layout\destinations.html:16
+msgid "place_03"
+msgstr "Valencia"
+
+#: .\landing\templates\layout\featured.html:4
+msgid "featured_title"
+msgstr "PROPIEDADES DESTACADAS"
+
+#: .\landing\templates\layout\featured.html:16
+#: .\landing\templates\layout\featured.html:29
+#: .\landing\templates\layout\featured.html:42
+msgid "featured_night"
+msgstr "noche"
+
+#: .\landing\templates\layout\header.html:21
+msgid "header_country"
+msgstr "ESPAÑA"
+
+#: .\landing\templates\layout\reason.html:5
+msgid "reason_why"
+msgstr "¿POR QUÉ ESPAÑA?"
+
+#: .\landing\templates\layout\reason.html:8
+msgid "reason_01"
+msgstr ""
+"Ubicada en el corazón de la Península Ibérica, España es un destino "
+"cautivador por su cultura, su gastronomia y por la historia que cuentan sus "
+"calles, pueblos y ciudades. Aquí se fusiona la arquitectura colonial y "
+"moderna creando una vibrante atmósfera urbana que siempre tiene una historia "
+"por contar."
+
+#: .\landing\templates\layout\reason.html:11
+msgid "reason_02"
+msgstr ""
+"Dejate llevar por su animada cultura, desde energicas interpretaciones de "
+"flamenco hasta festivales, y disfruta de la exquisita variedad de sabores de "
+"su gastronomía mientras te rodeas de pintorescos mercados locales y "
+"acogedores cafés."
+
+#: .\landing\templates\layout\reason.html:12
+msgid "reason_03"
+msgstr ""
+"Aquí la modernidad y la tradición convergen para crear una experiencia de "
+"viaje única. Un destino donde cada paso es un viaje a través del tiempo."
+
+#: .\landing\templatetags\tags.py:22
+msgid "search_destination"
+msgstr "DESTINO"
+
+#: .\landing\templatetags\tags.py:23
+msgid "search_destination_ph"
+msgstr "Selecciona tu destino"
+
+#: .\landing\templatetags\tags.py:24
+msgid "search_date"
+msgstr "LLEGADA - SALIDA"
+
+#: .\landing\templatetags\tags.py:25
+msgid "search_date_ph"
+msgstr "Agregar fechas"
+
+#: .\landing\templatetags\tags.py:26
+msgid "search_guests"
+msgstr "HUÉSPEDES"
+
+#: .\landing\templatetags\tags.py:27
+msgid "search_guests_ph"
+msgstr "Huéspedes"

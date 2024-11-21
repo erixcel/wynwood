@@ -1,45 +1,25 @@
 {% load static %}
+{% load i18n %}
+{% load tags %}
+{% featured_context as context %}
+
 <section class="featured-landing">
-    <span>PROPIEDADES DESTACADAS</span>
-    <div class="row">
+    <span>{% translate "featured_title" %}</span>
+    <div class="row gy-3 gy-lg-5">
+        {% for property in context.properties %}
         <div class="col col-sm-6 col-lg-4">
-            <strong>Modern 2BR in the Heart of Miraflores</strong>
-            <p>Miraflores, Lima, Perú</p>
-            <img class="image" src="{% static 'img/destacado_01.png' %}" alt=""/>
+            <strong>{{ property.name }}</strong>
+            <p>{{ property.location }}</p>
+            {% include 'components/featured_slider.html' with images=property.photos%}
             <div class="d-flex justify-content-between">
                 <div>
-                    1 <img class="icon" src="{% static 'svg/user_icon.svg' %}" alt="">
+                    {{ property.capacity }} <img class="icon" src="{% static 'svg/user_icon.svg' %}" alt="">
                     |
-                    2 <img class="icon" src="{% static 'svg/bed_icon.svg' %}" alt="">
+                    {{ property.beds }} <img class="icon" src="{% static 'svg/bed_icon.svg' %}" alt="">
                 </div> 
-                <div>US$ 250 / noche</div>
+                <div>US$ {{ property.cost_per_night }} / {% translate "featured_night" %}</div>
             </div>
         </div>
-        <div class="col col-sm-6 col-lg-4">
-            <strong>Spacious 1BR with Balcony in Miraflores</strong>
-            <p>Miraflores, Lima, Perú</p>
-            <img class="image" src="{% static 'img/destacado_02.png' %}" alt=""/>
-            <div class="d-flex justify-content-between">
-                <div>
-                    1 <img class="icon" src="{% static 'svg/user_icon.svg' %}" alt="">
-                    |
-                    2 <img class="icon" src="{% static 'svg/bed_icon.svg' %}" alt="">
-                </div> 
-                <div>US$ 250 / noche</div>
-            </div>
-        </div>
-        <div class="col col-sm-6 col-lg-4">
-            <strong>Beautiful 2BR with Terrace in barranco</strong>
-            <p>Barranco, Lima, Perú</p>
-            <img class="image" src="{% static 'img/destacado_03.png' %}" alt=""/>
-            <div class="d-flex justify-content-between">
-                <div>
-                    1 <img class="icon" src="{% static 'svg/user_icon.svg' %}" alt="">
-                    |
-                    2 <img class="icon" src="{% static 'svg/bed_icon.svg' %}" alt="">
-                </div> 
-                <div>US$ 250 / noche</div>
-            </div>
-        </div>
+        {% endfor %}
     </div>
 </section>

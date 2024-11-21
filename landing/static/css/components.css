@@ -1,0 +1,125 @@
+/* shared */
+
+.input-container {
+    position: relative;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+}
+
+.input-container::after {
+    content: '+';
+    position: absolute;
+    right: 8px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 18px;
+    color: #000;
+    pointer-events: none;
+}
+
+.input-container input {
+    background-color: transparent;
+    border: none;
+    border-bottom: 2px solid #000;
+    outline: none;
+    width: 100%;
+    padding: 8px 40px 8px 8px;
+    font-size: 16px;
+    color: #333;
+    cursor: pointer;
+}
+
+/* select */
+
+.select-container .dropdown-menu {
+    width: 100%;
+    border-radius: 4px;
+}
+
+/* daterange picker */
+
+
+
+/* slider image */
+
+.glider-contain {
+    position: relative;
+    overflow: hidden;
+}
+
+.glider img {
+    width: 100%;
+    aspect-ratio: 3 / 4;
+    object-fit: cover;
+    margin-bottom: 1rem;
+}
+
+.glider-contain:hover .glider-prev,
+.glider-contain:hover .glider-next {
+    opacity: 1;
+}
+
+.glider-contain:hover .glider-prev.disabled,
+.glider-contain:hover .glider-next.disabled {
+    opacity: 0;
+}
+
+.glider-prev.disabled, .glider-next.disabled {
+    opacity: 0;
+}
+
+.glider-prev, .glider-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #000 !important;
+    background-color: #ffffffa0;
+    font-size: 1.5rem;
+    line-height: 1;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.glider-prev {
+    left: 10px;
+}
+
+.glider-next {
+    right: 10px;
+}
+
+.dots {
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 0px;
+}
+
+.dots button {
+    width: 10px;
+    height: 10px;
+    background-color: #ffffffa0;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.dots button.active {
+    background-color: white;
+}
+
+/* media querys */
+@media (min-width: 1200px) {
+    .input-container {
+        width: 80%;
+    }
+}
