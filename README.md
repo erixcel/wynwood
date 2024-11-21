@@ -45,7 +45,7 @@ Sigue estos pasos para instalar y ejecutar el proyecto en tu entorno local:
 ```
 1. Insertar datos:
 ```bash
-   python data-insert.py
+   python manage.py data_insert
 ```
 1. Levantar el servidor:
 ```bash
