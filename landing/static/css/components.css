@@ -123,3 +123,11 @@
         width: 80%;
     }
 }
+
+@media (max-width: 575px) {
+    .dots button {
+        width: 7px;
+        height: 7px;
+        margin: 4px;
+    }
+}

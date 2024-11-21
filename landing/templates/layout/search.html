@@ -3,26 +3,28 @@
 {% search_context as context %}
 
 <section class="search-landing">
-    <div class="row align-items-center g-3 g-lg-5">
-        <div class="col-12 col-xl-7">
-            <div class="row g-3 g-lg-5">
-                <div class="col-12 col-sm-6">
-                    {% include 'components/search_select_param.html' with properties=context.destination options=context.destinations %}
+    <form method="GET" action="{% url 'redirect_external' %}">
+        <div class="row align-items-center g-3 g-lg-5">
+            <div class="col-12 col-xl-7">
+                <div class="row g-3 g-lg-5">
+                    <div class="col-12 col-sm-6">
+                        {% include 'components/search_select_param.html' with properties=context.destination options=context.destination_list %}
+                    </div>
+                    <div class="col-12 col-sm-6">
+                        {% include 'components/search_date_param.html' with properties=context.date %}
+                    </div>
                 </div>
-                <div class="col-12 col-sm-6">
-                    {% include 'components/search_date_param.html' with properties=context.date %}
+            </div>
+            <div class="col-12 col-xl-5">
+                <div class="row g-3 g-lg-5">
+                    <div class="col-12 col-sm-6 col-xl-8">
+                        {% include 'components/search_select_param.html' with properties=context.guests options=context.guests_list %}
+                    </div>
+                    <div class="col-12 col-sm-6 col-xl-4 d-flex justify-content-center align-items-center">
+                        {% include 'components/search_button.html' %}
+                    </div>
                 </div>
             </div>
         </div>
-        <div class="col-12 col-xl-5">
-            <div class="row g-3 g-lg-5">
-                <div class="col-12 col-sm-6 col-xl-8">
-                    {% include 'components/search_select_param.html' with properties=context.guest options=context.guests %}
-                </div>
-                <div class="col-12 col-sm-6 col-xl-4 d-flex justify-content-center align-items-center">
-                    {% include 'components/search_button.html' %}
-                </div>
-            </div>
-        </div>
-    </div>
+    </form>
 </section>

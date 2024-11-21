@@ -13,37 +13,40 @@ def normalize_text(text):
 def search_context():
     cities = City.objects.select_related('state__country').all()
 
-    destinations = [
+    destination_list = [
         f"{city.name}, {city.state.country.name}"
         for city in cities
     ]
 
-    guests = [
+    guests_list = [
         f"{i} {str(_('search_guests_ph'))}"
-        for i in range(1, 12)
+        for i in range(1, 9)
     ]
 
     return {
         "destination": {
             "id":"destination",
+            "name":"destination",
             "label": _("search_destination"), 
             "placeholder": _("search_destination_ph"), 
             "icon":"svg/search_icon.svg",
         },
         "date": {
             "id":"date",
+            "name":"date",
             "label": _("search_date"), 
             "placeholder": _("search_date_ph"), 
             "icon":"svg/calendar_icon.svg",
         },
-        "guest": {
-            "id":"date",
+        "guests": {
+            "id":"guests",
+            "name":"guests",
             "label": _("search_guests"), 
             "placeholder": _("search_guests_ph"), 
             "icon":"svg/guests_icon.svg",
         },
-        "guests": guests,
-        "destinations": destinations,
+        "guests_list": guests_list,
+        "destination_list": destination_list,
     }
 
 @register.simple_tag

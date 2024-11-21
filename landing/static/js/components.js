@@ -5,11 +5,11 @@ $(document).ready(function() {
             opens: 'center',
             autoApply: true,
             locale: {
-                format: 'MM/DD/YYYY'
+                format: 'DD/MM/YYYY'
             },
             drops: 'auto'
         }, function(start, end) {
-            $input.val(`${start.format('MM/DD/YYYY')} - ${end.format('MM/DD/YYYY')}`);
+            $input.val(`${start.format('DD/MM/YYYY')} - ${end.format('DD/MM/YYYY')}`);
         });
     });
 

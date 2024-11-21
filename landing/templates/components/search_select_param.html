@@ -6,7 +6,7 @@
   </div>
   <div class="select-container">
     <div class="dropdown input-container">
-        <input class="dropdown-toggle" type="text" id="{{ properties.id }}" data-bs-toggle="dropdown" aria-expanded="false" placeholder="{{ properties.placeholder }}" readonly>
+        <input class="dropdown-toggle" type="text" id="{{ properties.id }}" name="{{ properties.name }}" data-bs-toggle="dropdown" aria-expanded="false" placeholder="{{ properties.placeholder }}" readonly>
         <ul class="dropdown-menu" aria-labelledby="{{ properties.id }}">
           {% for option in options %}
             <li><a class="dropdown-item" data-value="{{ option }}">{{ option }}</a></li>
